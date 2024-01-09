@@ -399,13 +399,6 @@ table td {
   color: red;
 }
 
-/* Additional styles for the image slider */
-.slider-container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-}
 
 .slider {
   display: flex;
