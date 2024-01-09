@@ -22,10 +22,44 @@
                 <h1 class="animate__animated animate__backInRight">Phenyo Othusitse</h1>
                 <p class="animate__animated animate__backInRight">Software Developer | System Analysts | IT Specialists | Technopreneurs | Business Analysts | Research Scientists</p>
                 <div class="headshot-container">
-                    <div class="button"><a href="#about-me">About me</a></div>
-                    <div class="button"><a href="#my-certification">My Certification </a></div>
-                    <div class="button"><a href="#projects-built">Projects Built</a></div>
-                    <div class="button"><a href="#Download-CV">Download CV</a></div>
+                    <div class="button" onclick="scrollToSection('about-me')"><a href="#about-me">About me</a></div>
+                    <div class="button" onclick="scrollToSection('my-certification')"><a href="#my-certification">My Certification</a></div>
+                    <div class="button" onclick="scrollToSection('projects-built')"><a href="#projects-built">Projects Built</a></div>
+                    <div class="button" onclick="downloadPDF()">Download CV</div>
+
+                    <script>
+                        <!--My function for scroll down-->
+                        function scrollToSection(sectionId) {
+                            var section = document.getElementById(sectionId);
+
+                            if (section) {
+                                section.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }
+                    </script>
+
+                        <script>
+                            <!--Function for downloading my cv-->
+                            function downloadPDF() {
+                                // path to my pdf document
+                                var pdfUrl = 'cv/phenyo othusitse.pdf';
+
+                                // Creating an anchor element to trigger the download
+                                var link = document.createElement('a');
+                                link.href = pdfUrl;
+                                link.download = 'Mr Phenyo Othusitse Cv.pdf'; // You can change the downloaded file name if needed
+                                link.target = '_blank'; // Open the link in a new tab/window
+                                document.body.appendChild(link);
+
+                                // Triggering the click event of the anchor element
+                                link.click();
+
+                                // Removing the anchor element from the document
+                                document.body.removeChild(link);
+                            }
+                        </script>
+
+
                     <div class="button"><a href="#contact-me">Contact me</a></div>
                     <div class="buttons"><img class="headshot" src="image/IMG-20230314-WA0010.jpg" alt="IzzyP's headshot"/></div>
                 </div>
@@ -99,103 +133,210 @@
       <section class="sub-section-alternative"  id="projects-built">
           <h2>Projects</h2>
           <div class="project-container">
+              <div class="slider">
+
               <div class="project-card">
                   <img class="project-image" src="image/IMG-20230314-WA0010.jpg" alt="Project One Image"/>
+                  <hr>
                   <h3>Ecommerce Web Application using ASP.NET</h3>
+                  <hr>
+
                   <p class="subtext">This project allows customers to register online then login to purchase products and make transactions. It also contains a shopping card.
                       The Admin and stuffs are authorised to perform certain tasks like managing users and reorder stock levels. It uses ASP.net, C#, Javascript, CSS and html.</p>
-                  <hr/>
+                  <hr>
                   <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
+                  <hr>
+
               </div>
-          <div class="project-card">
-              <img class="project-image" src="image/IMG-20230314-WA0010.jpg" alt="Project One Image"/>
-              <h3>Death and Birth Registration</h3>
-              <p class="subtext">This is my project is for birth and death registraion in Civil registration and it allows movement of the reports and certificates between location.</p>
-              <hr/>
-              <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
-          </div>
-          <div class="project-card">
-              <img class="project-image" src="image/IMG-20230314-WA0010.jpg" alt="Project One Image"/>
-              <h3>Universal API</h3>
-              <p class="subtext">The API allows a submission of everything provided in the form to the company domain email. It was made using FAST API framework.</p>
-              <hr/>
-              <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
-          </div>
+              <div class=" project-card">
+                  <img class="project-image" src="image/IMG-20230314-WA0010.jpg" alt="Project One Image"/>
+                  <hr>
+
+                  <h3>Death and Birth Registration</h3>
+                  <hr>
+                  <p class="subtext">This is my project is for birth and death registraion in Civil registration and it allows movement of the reports and certificates between location.</p>
+                  <hr>
+                  <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
+                  <hr>
+              </div>
               <div class="project-card">
                   <img class="project-image" src="image/IMG-20230314-WA0010.jpg" alt="Project One Image"/>
-                  <h3>FAQ Chabot</h3>
-                  <p class="subtext">This project is a chatbot that answers Frequently Answered Questions.  It uses Create FAQ with Knowledge based feature in dialog flow</p>
-                  <hr/>
+                  <hr>
+                  <h3>Universal API</h3>
+                  <hr>
+                  <p class="subtext">The API allows a submission of everything provided in the form to the company domain email. It was made using FAST API framework.</p>
+                  <hr>
                   <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
+                  <hr>
+
+              </div>
+              <div class="project-card">
+                  <img class="project-image" src="image/IMG-20230314-WA0010.jpg" alt="Project One Image"/>
+                  <hr>
+                  <h3>FAQ Chabot</h3>
+                  <hr>
+                  <p class="subtext">This project is a chatbot that answers Frequently Answered Questions.  It uses Create FAQ with Knowledge based feature in dialog flow</p>
+                  <hr>
+                  <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
+                  <hr>
               </div>
 
               <div class="project-card">
                   <img class="project-image" src="image/IMG-20230314-WA0010.jpg" alt="Project One Image"/>
+                  <hr>
                   <h3>Website for information</h3>
+                  <hr>
                   <p class="subtext">This project is my first website that provides rich information about the city of Antalya. it uses html and css.</p>
-                  <hr/>
+                  <hr>
                   <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
+                  <hr>
               </div>
               <div class="project-card">
                   <img class="project-image" src="image/IMG-20230314-WA0010.jpg" alt="Project One Image"/>
+                  <hr>
                   <h3>Desktop Application</h3>
+                  <hr>
                   <p class="subtext">This is my project is a Desk Top Application that allows new students to register for loan application. the
-                  information is saved to the SQL database that allows admin to manage giving loans and receiving payments</p>
-                  <hr/>
+                      information is saved to the SQL database that allows admin to manage giving loans and receiving payments</p>
+                  <hr>
                   <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
+                  <hr>
               </div>
               <div class="project-card">
                   <img class="project-image" src="image/IMG-20230314-WA0010.jpg" alt="Project One Image"/>
+                  <hr>
                   <h3>Flutter App for registration</h3>
+                  <hr>
                   <p class="subtext">This is my project is a mobile application that allows for new registration and email confirmation by validating
                       user's input then saving to Firebase database to validate login.</p>
-                  <hr/>
+                  <hr>
                   <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
+                  <hr>
               </div>
               <div class="project-card">
                   <img class="project-image" src="image/IMG-20230314-WA0010.jpg" alt="Project One Image"/>
+                  <hr>
                   <h3>Payment System</h3>
+                  <hr>
                   <p class="subtext">This is my project is a web application that uses API to transfer payment information of bills to the databases.
-                  it uses Django and sql lite database</p>
-                  <hr/>
+                      it uses Django and sql lite database</p>
+                  <hr>
                   <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
+                  <hr>
               </div>
               <div class="project-card">
                   <img class="project-image" src="image/IMG-20230314-WA0010.jpg" alt="Project One Image"/>
+                  <hr>
                   <h3>Ecommerce System using PhP</h3>
+                  <hr>
                   <p class="subtext">This is my project uses php, html and Maria db scripts only. it is an ecommerce presence for farm equipments.
                       it allows customer to register to register themselves and providing bank details, login to view & purchase products then make
-                      a transactions. Admins login and  view and manage all the reports and make stock movements.  /p>
-                  <hr/>
+                      a transactions. Admins login and  view and manage all the reports and make stock movements.</p>
+                  <hr>
                   <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
+                  <hr>
               </div>
               <div class="project-card">
                   <img class="project-image" src="image/IMG-20230314-WA0010.jpg" alt="Project One Image"/>
+                  <hr>
                   <h3>Photoboth</h3>
+                  <hr>
                   <p class="subtext">This is my project is a flutter mobile application that contains a company log
-                  and servers as a photoboth.</p>
-                  <hr/>
+                      and servers as a photoboth.</p>
+                  <hr>
                   <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
+                  <hr>
               </div>
               <div class="project-card">
                   <img class="project-image" src="image/IMG-20230314-WA0010.jpg" alt="Project One Image"/>
+                  <hr>
                   <h3>Social Protection Websites</h3>
+                  <hr>
                   <p class="subtext">This is my projects are company websites that provides rich and information and transactions
                       that carters for social protection .</p>
-                  <hr/>
+                  <hr>
                   <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
+                  <hr>
               </div>
 
-          <div class="project-card">
-              <img class="project-image" src="image/IMG-20230314-WA0010.jpg" alt="Project One Image"/>
-              <h3>Project Four</h3>
-              <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
-              <hr/>
-              <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
+              <div class="project-card">
+                  <img class="project-image" src="image/IMG-20230314-WA0010.jpg" alt="Project One Image"/>
+                  <hr>
+                  <h3>Project Four</h3>
+                  <hr>
+                  <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
+                  <hr>
+                  <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
+                  <hr>
+              </div>
+              </div>
           </div>
-          </div>
+          <!-- Optional: Add navigation buttons -->
+          <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+          <a class="next" onclick="changeSlide(1)">&#10095;</a>
 
+          <!-- Optional: Add slide indicators (dots) -->
+          <div class="dot-container">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+          <script>
+              // Your JavaScript logic goes here
+              var currentSlideIndex = 1;
+
+              function showSlides(index) {
+                  var slides = document.querySelector('.slider');
+                  var dots = document.querySelectorAll('.dot');
+                  var projectCards = document.querySelectorAll('.project-card');
+
+                  if (index > slides.children.length) {
+                      currentSlideIndex = 1;
+                  }
+
+                  if (index < 1) {
+                      currentSlideIndex = slides.children.length;
+                  }
+
+                  for (var i = 0; i < slides.children.length; i++) {
+                      projectCards[i].style.display = 'none';
+                  }
+
+                  for (var i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(' active', '');
+                  }
+
+                  projectCards[currentSlideIndex - 1].style.display = 'flex';
+                  dots[currentSlideIndex - 1].className += ' active';
+              }
+
+              function changeSlide(n) {
+                  showSlides(currentSlideIndex += n);
+              }
+
+              function currentSlide(n) {
+                  showSlides(currentSlideIndex = n);
+              }
+
+              // Keyboard navigation
+              document.addEventListener('keydown', function(event) {
+                  if (event.key === 'ArrowLeft') {
+                      changeSlide(-1);
+                  } else if (event.key === 'ArrowRight') {
+                      changeSlide(1);
+                  }
+              });
+
+              // Initial setup
+              showSlides(currentSlideIndex);
+          </script>
       </section>
+
+
+
+
+
+
 
 
       <section class="sub-section-4" id="experience">
