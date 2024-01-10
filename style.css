@@ -429,10 +429,10 @@ table td {
 .next {
   cursor: pointer;
   position: relative;
-  top: 50%;
+  top: 319px;
   width: auto;
-  padding-right: 116px;
-  padding-left: 116px;
+  padding-right: 186px;
+  padding-left: 186px;
 
   margin-top: -22px;
   font-size: 20px;
