@@ -34,10 +34,11 @@
           <nav>
               <img class="logo" src="image/download.gif" alt="Phenyo Othusitse's logo"/>
               <ul id="nav-list">
-                  <li><a href="#about-me"><i class="fa-solid fa-address-card"></i>About me</a></li>
-                  <li><a href="#resume"><i class="fa-solid fa-file"></i>My resume</a></li>
-                  <li><a href="#contact-me"><i class="fa-solid fa-phone"></i>Contact me</a></li>
+                  <li onclick="scrollToSection('about-me')"><a href="#about-me"><i class="fa-solid fa-address-card"></i>About me</a></li>
+                  <li onclick="scrollToSection('resume')"><a href="#resume"><i class="fa-solid fa-file"></i>My resume</a></li>
+                  <li onclick="scrollToSection('contact-me')" ><a href="#contact-me"><i class="fa-solid fa-phone"></i>Contact me</a></li>
               </ul>
+
           </nav>
           <div class="hero-area">
             <div class="hero-text">
@@ -81,8 +82,7 @@
                             }
                         </script>
 
-
-                    <div class="button"><a href="#contact-me">Contact me</a></div>
+                    <div class="button" onclick="scrollToSection('contact-me')"><a href="#contact-me">About me</a></div>
                     <div class="buttons"><img class="headshot" src="image/IMG-20230314-WA0010.jpg" alt="IzzyP's headshot"/></div>
                 </div>
             </div>
@@ -365,15 +365,35 @@
           </div>
       </section>
       <footer>
+          <div class="contact" id="contact-me">
+              <hr>
+              <h2><i class="fa-solid fa-square-phone"></i>Contact me</h2><hr>
+              <p><i class="fa-brands fa-whatsapp"></i>+267 7403 1319 0R +267 7534 5650</p>
+              <br>
+              <p><i class="fa-solid fa-envelope"></i>pheotppman@gmail.com OR abc20-13@thuto.bac.ac.bw</p><hr>
+          </div>
         <div class="social-menu">
                   <ul>
-                    <li><a href="https://www.linkedin.com/in/phenyo-othusitse-9a333124b/"><i class="fa-brands fa-linkedin"></i></a><li><br>
-                      <li><a href="#"><i class="fa-brands fa-facebook"></i></a><li><br>
-                      <li><a href="#"><i class="fa-brands fa-instagram"></i></a><li><br>
-                      <li><a href="#"><i class="fa-brands fa-twitter"></i></a><li><br>
-                      <br>
+                    <li><a href="https://www.linkedin.com/in/phenyo-othusitse-9a333124b/"><i class="fa-brands fa-linkedin"></i></a><li>
+                      <li><a href="#"><i class="fa-brands fa-facebook"></i></a><li>
+                      <li><a href="#"><i class="fa-brands fa-instagram"></i></a><li>
+                      <li><a href="#"><i class="fa-brands fa-twitter"></i></a><li>
+
                   </ul>
+            <hr>
                </div>
+          <div class="all-rights">
+          <!-- Add an ID to the paragraph element for easier selection -->
+          <p id="copyright">&copy; <span id="currentYear"></span> Phenyo Othusitse's Portfolio. All Rights Reserved</p>
+
+
+          <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                  // Update the current year in the HTML
+                  document.getElementById("currentYear").textContent = new Date().getFullYear();
+              });
+          </script>
+          </div>
       </footer>
 
 
