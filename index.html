@@ -8,6 +8,28 @@
     <title>Portfolio</title>
   </head>
   <body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <script>
+      // Get the button
+      let mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+          } else {
+              mybutton.style.display = "none";
+          }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+  </script>
       <section class="hero">
           <nav>
               <img class="logo" src="image/download.gif" alt="Phenyo Othusitse's logo"/>
@@ -132,7 +154,12 @@
 
       <section class="sub-section-alternative"  id="projects-built">
           <h2>Projects</h2>
+          <div >
+              <a class="prev" onclick="changeSlide(-1)"><i class="fa-solid fa-arrow-left"></i></a>
+              <a class="next" onclick="changeSlide(1)"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
           <div class="project-container">
+
               <div class="slider">
               <div class="project-card">
                   <img class="project-image" src="image/IMG-20230314-WA0010.jpg" alt="Project One Image"/>
@@ -259,6 +286,9 @@
               </div>
               </div>
           </div>
+
+
+
           <!-- Optional: Add navigation buttons -->
           <!--<a class="prev" onclick="changeSlide(-1)">&#10094;</a>
           <a class="next" onclick="changeSlide(1)">&#10095;</a>-->
@@ -319,7 +349,6 @@
               showSlides(currentSlideIndex);
           </script>
       </section>
-
 
 
 
