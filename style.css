@@ -299,7 +299,9 @@ a {
 
 
 
-
+.skill p{
+  text-align: center;
+}
 
 
 /*my tables*/
@@ -350,6 +352,10 @@ table td {
   background-color: #A9A9A9;
 }
 
+.certificatess p{
+  text-align: center;
+
+}
 
 /*my project*/
 
